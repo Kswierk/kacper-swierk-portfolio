@@ -2,15 +2,16 @@ import React from "react"
 import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
-  body, html {
-    background-color: #eee;
-    font-family: "Roboto Mono", monospace;
+*,::before, ::after {
     margin: 0;
     padding:0;
     box-sizing: border-box;
     font-size: 1rem;
-    overflow-x: hidden;
-
+}
+  body, html {
+    background-color: #14274e;
+    font-family: "Roboto Mono", monospace;
+    color: #e94560;
   }
 `
 export default function Layout({ children }) {
