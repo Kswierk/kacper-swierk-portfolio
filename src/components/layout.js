@@ -11,8 +11,10 @@ const GlobalStyle = createGlobalStyle`
   body, html {
     background-color: #14274e;
     font-family: "Roboto Mono", monospace;
-    color: #e94560;
-  }
+    color: #dadada;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;  
+     }
 `
 export default function Layout({ children }) {
   return (

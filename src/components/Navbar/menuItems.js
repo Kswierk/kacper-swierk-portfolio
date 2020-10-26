@@ -1,26 +1,26 @@
 export const menuItems = [
   {
-    title: "01. About",
+    title: " About",
     url: "#",
     className: "fadelink",
   },
   {
-    title: "02. Technologies",
+    title: " Technologies",
     url: "#",
     className: "fadelink",
   },
   {
-    title: "03. Work",
+    title: " Work",
     url: "#",
     className: "fadelink",
   },
   {
-    title: "04. Contact",
+    title: " Contact",
     url: "#",
     className: "fadelink",
   },
   {
-    title: "Resume",
+    title: " Resume",
     url: "#",
     className: "fadelink",
 

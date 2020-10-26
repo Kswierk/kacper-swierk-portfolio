@@ -9,16 +9,17 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70px;
+  height: 80px;
+  z-index: 300;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 790px) {
     position: relative;
     justify-content: start;
   }
 `
 
 const LogoContainer = styled.div`
-  height: 70px;
+  height: 50px;
   justify-self: start;
   cursor: pointer;
   margin-left: 20px;
@@ -34,7 +35,7 @@ const StyledUl = styled.ul`
   margin-right: 2rem;
   background-color: #204969;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 790px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,9 +51,8 @@ const StyledUl = styled.ul`
 `
 
 const StyledBurger = styled.button`
-  /* display: none; */
   position: absolute;
-  top: 35px;
+  top: 40px;
   transform: translateY(-50%);
   right: 5px;
   padding: 10px;
@@ -63,7 +63,7 @@ const StyledBurger = styled.button`
   cursor: pointer;
   outline: none;
 
-  @media (min-width: 767px) {
+  @media (min-width: 790px) {
     display: none;
   }
 `
@@ -123,14 +123,15 @@ const StyledLink = styled.a`
   font-size: 0.9rem;
   border: ${props => (props.resume ? "1px solid #08ffc8" : null)};
   border-radius: ${props => (props.resume ? "4px" : null)};
-  color: #08ffc8;
+  color: ${props => (props.resume ? "#08ffc8" : "#dadada")};
+  transition: all 0.3s ease-out;
 
   &:hover {
     color: #08ffc8;
-    transition: all 0.2 ease-out;
+    transition: all 0.3s ease-out;
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 790px) {
     text-align: center;
     padding: ${props => (props.resume ? "1rem" : "2rem")};
     width: 100%;
@@ -141,7 +142,16 @@ const StyledLink = styled.a`
 `
 
 const Logo = styled.img`
-  height: 70px;
+  height: 50px;
+`
+
+const StyledSpan = styled.span`
+  color: #08ffc8;
+  font-size: 0.9rem;
+`
+
+const StyledLi = styled.li`
+  transition: all 0.5s ease-out;
 `
 
 const Navbar = () => {
@@ -154,16 +164,19 @@ const Navbar = () => {
     gsap.fromTo(
       burger,
       {
-        y: "-=100",
+        opacity: 0,
+        duration: 1,
       },
-      { y: "+=100", autoAlpha: 1 }
+      { autoAlpha: 1, opacity: 1 }
     )
     gsap.fromTo(
       logo,
       {
-        y: "-=100",
+        opacity: 0,
+        duration: 1,
+        delay: 0.5,
       },
-      { y: "+=100", autoAlpha: 1 }
+      { autoAlpha: 1, opacity: 1 }
     )
 
     links.forEach((elem, index) => {
@@ -194,11 +207,12 @@ const Navbar = () => {
       <StyledUl active={clicked}>
         {menuItems.map((item, index) => {
           return (
-            <li className={item.className} key={index}>
+            <StyledLi className={item.className} key={index}>
               <StyledLink resume={item.resume} href={item.url}>
+                {item.resume ? null : <StyledSpan>0{index + 1}.</StyledSpan>}
                 {item.title}
               </StyledLink>
-            </li>
+            </StyledLi>
           )
         })}
       </StyledUl>
