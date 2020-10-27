@@ -10,12 +10,13 @@ const RightBar = styled.div`
   right: 60px;
   writing-mode: vertical-lr;
   text-decoration: none;
+  font-family: "Roboto Mono", monospace;
 
   &:after {
     content: "";
     display: inline-block;
     width: 1px;
-    height: 100px;
+    height: 140px;
     margin-top: 30px;
     margin-right: 2px;
     background-color: #dadada;
@@ -48,7 +49,7 @@ const LeftBar = styled.div`
     content: "";
     display: inline-block;
     width: 1px;
-    height: 100px;
+    height: 140px;
     margin-top: 30px;
     margin-left: 8px;
     background-color: #dadada;
@@ -72,7 +73,7 @@ const Sidebars = () => {
     const elements = document.querySelectorAll(".sidebar")
 
     elements.forEach(elem => {
-      gsap.fromTo(elem, { opacity: 0 }, { opacity: 1, delay: 1.4 })
+      gsap.fromTo(elem, { opacity: 0 }, { opacity: 1, delay: 2, duration: 1 })
     })
   }, [])
   return (

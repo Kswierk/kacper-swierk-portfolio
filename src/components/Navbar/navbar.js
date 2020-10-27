@@ -5,15 +5,21 @@ import { gsap } from "gsap"
 import logo from "../../assets/images/logo.jpg"
 
 const StyledNav = styled.nav`
-  background-color: #204969;
+  background-color: RGBA(32, 73, 105, 0.7);
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px;
+  height: ${props => (props.top ? "80px" : "70px")};
   z-index: 300;
+  position: fixed;
+  backdrop-filter: blur(10px);
+  top: ${props => (props.scrolled ? "-80px" : "0")};
+  transition: all 0.3s ease-in-out;
+  box-shadow: ${props => (props.top ? null : "0 10px 30px -10px black")};
 
   @media screen and (max-width: 790px) {
-    position: relative;
+    position: fixed;
     justify-content: start;
   }
 `
@@ -33,9 +39,10 @@ const StyledUl = styled.ul`
   width: 80vw;
   justify-content: end;
   margin-right: 2rem;
-  background-color: #204969;
+  /* background-color: RGBA(218, 218, 218, 0.5); */
 
   @media screen and (max-width: 790px) {
+    background-color: RGBA(218, 218, 218, 0.5);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -118,6 +125,8 @@ const BurgerInner = styled.span`
 `
 
 const StyledLink = styled.a`
+  font-family: "Roboto Mono", monospace;
+
   text-decoration: none;
   padding: 0.5rem 0.8rem;
   font-size: 0.9rem;
@@ -129,6 +138,8 @@ const StyledLink = styled.a`
   &:hover {
     color: #08ffc8;
     transition: all 0.3s ease-out;
+    background-color: ${props =>
+      props.resume ? "RGBA(8, 255, 200, 0.2)" : "null"};
   }
 
   @media screen and (max-width: 790px) {
@@ -151,11 +162,13 @@ const StyledSpan = styled.span`
 `
 
 const StyledLi = styled.li`
-  transition: all 0.5s ease-out;
+  /* transition: all 0.5s ease-out; */
 `
 
 const Navbar = () => {
   const [clicked, setClicked] = useState(false)
+  const [scroll, setScroll] = useState(false)
+  const [isTop, setisTop] = useState(false)
 
   useEffect(() => {
     const links = document.querySelectorAll(".fadelink")
@@ -173,50 +186,80 @@ const Navbar = () => {
       logo,
       {
         opacity: 0,
-        duration: 1,
-        delay: 0.5,
       },
-      { autoAlpha: 1, opacity: 1 }
+      { autoAlpha: 1, opacity: 1, duration: 1, delay: 0.5 }
     )
 
     links.forEach((elem, index) => {
-      gsap.set(elem, { autoAlpha: 0 })
+      gsap.set(elem, { autoAlpha: 0, opacity: 0 })
 
       gsap.fromTo(
         elem,
-        { y: "-=100" },
-        { y: "+=100", autoAlpha: 1, delay: index / 15 }
+        {
+          y: "-=200",
+          opacity: 0,
+          visibility: "hidden",
+        },
+        {
+          y: "+=200",
+          autoAlpha: 1,
+          opacity: 1,
+          delay: index / 8,
+          visibility: "visible",
+          ease: "power1.inOut",
+        }
       )
     })
   }, [])
 
+  let prevScrollpos = window.pageYOffset
+  window.onscroll = () => {
+    if (scroll) {
+      setisTop(true)
+    } else setisTop(false)
+    if (window.pageYOffset === 0) {
+      setisTop(true)
+    } else {
+      setisTop(false)
+    }
+    let currentScrollPos = window.pageYOffset
+    if (prevScrollpos > currentScrollPos) {
+      setScroll(false)
+    } else {
+      setScroll(true)
+    }
+    prevScrollpos = currentScrollPos
+  }
+
   return (
-    <StyledNav>
-      <LogoContainer>
-        <Logo className="logo" src={logo} />
-      </LogoContainer>
-      <StyledBurger
-        className="burger"
-        hamburger={clicked}
-        onClick={() => setClicked(!clicked)}
-      >
-        <BurgerBox>
-          <BurgerInner hamburger={clicked} />
-        </BurgerBox>
-      </StyledBurger>
-      <StyledUl active={clicked}>
-        {menuItems.map((item, index) => {
-          return (
-            <StyledLi className={item.className} key={index}>
-              <StyledLink resume={item.resume} href={item.url}>
-                {item.resume ? null : <StyledSpan>0{index + 1}.</StyledSpan>}
-                {item.title}
-              </StyledLink>
-            </StyledLi>
-          )
-        })}
-      </StyledUl>
-    </StyledNav>
+    <>
+      <StyledNav top={isTop} scrolled={scroll} className="fadelink">
+        <LogoContainer>
+          <Logo className="logo" src={logo} />
+        </LogoContainer>
+        <StyledBurger
+          className="burger"
+          hamburger={clicked}
+          onClick={() => setClicked(!clicked)}
+        >
+          <BurgerBox>
+            <BurgerInner hamburger={clicked} />
+          </BurgerBox>
+        </StyledBurger>
+        <StyledUl active={clicked}>
+          {menuItems.map((item, index) => {
+            return (
+              <StyledLi className={item.className} key={index}>
+                <StyledLink resume={item.resume} href={item.url}>
+                  {item.resume ? null : <StyledSpan>0{index + 1}.</StyledSpan>}
+                  {item.title}
+                </StyledLink>
+              </StyledLi>
+            )
+          })}
+        </StyledUl>
+      </StyledNav>
+    </>
   )
 }
 

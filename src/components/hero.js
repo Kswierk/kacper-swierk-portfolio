@@ -20,7 +20,7 @@ const StyledBtn = styled.button`
 
 const HeroWraper = styled.div`
   position: relative;
-  height: calc(100vh - 80px);
+  height: 100vh;
 `
 
 const Wraper = styled.div`
@@ -92,6 +92,11 @@ const StyledP = styled.p`
   }
 `
 
+const StyledGreeting = styled.p`
+  font-family: "Roboto Mono", monospace;
+  color: #08ffc8;
+`
+
 const Hero = () => {
   useEffect(() => {
     const fadeElements = document.querySelectorAll(".fadeElement")
@@ -102,14 +107,14 @@ const Hero = () => {
       gsap.fromTo(
         elem,
         { y: "+=50" },
-        { y: "-=50", autoAlpha: 1, delay: 0.8, duration: 0.6 }
+        { y: "-=50", autoAlpha: 1, delay: 1.4, duration: 1 }
       )
     })
   })
   return (
     <HeroWraper>
       <Wraper>
-        <p className="fadeElement">Hi, my name is</p>
+        <StyledGreeting className="fadeElement">Hi, my name is</StyledGreeting>
         <HeroText className="fadeElement">
           Kacper Świerk.
           <HeroTexth3 className="fadeElement">

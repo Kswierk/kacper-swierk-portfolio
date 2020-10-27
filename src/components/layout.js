@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
 }
   body, html {
     background-color: #14274e;
-    font-family: "Roboto Mono", monospace;
+    font-family: "Montserrat", sans-serif;
     color: #dadada;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;  
