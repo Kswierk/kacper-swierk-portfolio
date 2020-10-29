@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import Navbar from "../components/Navbar/navbar"
 import Sidebars from "../components/sidebars/sidebars"
 import About from "../components/about"
+import Technologies from "../components/Technologies/technologies"
 
 const IndexPage = () => (
   <>
@@ -12,6 +13,7 @@ const IndexPage = () => (
     <Hero />
     <Sidebars />
     <About />
+    <Technologies />
   </>
 )
 

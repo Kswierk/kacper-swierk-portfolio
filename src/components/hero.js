@@ -31,7 +31,7 @@ const Wraper = styled.div`
 
   @media (max-height: 530px) {
     position: relative;
-    top: 0;
+    top: 80px;
     transform: none;
   }
 
@@ -101,13 +101,13 @@ const Hero = () => {
   useEffect(() => {
     const fadeElements = document.querySelectorAll(".fadeElement")
 
-    fadeElements.forEach(elem => {
+    fadeElements.forEach((elem, index) => {
       gsap.set(elem, { autoAlpha: 0 })
 
       gsap.fromTo(
         elem,
         { y: "+=50" },
-        { y: "-=50", autoAlpha: 1, delay: 1.4, duration: 1 }
+        { y: "-=50", autoAlpha: 1, delay: 1 + index / 8, duration: 1.2 }
       )
     })
   })

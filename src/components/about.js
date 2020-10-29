@@ -1,7 +1,11 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import SectionHeading from "../components/sectionheading"
 import Image from "../assets/images/kacper.jpg"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(ScrollTrigger)
 
 const Wraper = styled.div`
   max-width: 900px;
@@ -9,7 +13,7 @@ const Wraper = styled.div`
 `
 
 const StyledPara = styled.p`
-  margin: 15px 0;
+  margin-bottom: 15px;
   line-height: 1.7rem;
   @media (min-width: 790px) {
     width: 85%;
@@ -21,7 +25,7 @@ const ImgWraper = styled.div`
   max-height: 300px;
   width: 50vw;
   min-width: 200px;
-  border: 1px solid red;
+  border: 1px solid #08ffc8;
   border-radius: 4px;
   margin-top: 30px;
 
@@ -59,8 +63,26 @@ const StyledSpan = styled.span`
 `
 
 const About = () => {
+  useEffect(() => {
+    const triggerElement = document.querySelector(".scrollTriggered")
+
+    gsap.fromTo(
+      triggerElement.children,
+      {
+        y: "+=100",
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: { trigger: triggerElement, start: "top 70%" },
+      }
+    )
+  }, [])
+
   return (
-    <Wraper>
+    <Wraper className="scrollTriggered">
       <SectionHeading sectionNumber="01." sectionName="About Me" />
       <SectionWraper>
         <div>
@@ -78,9 +100,6 @@ const About = () => {
             <StyledSpan>Cracow University of Technology</StyledSpan>, I joined
             the engineering team at Upstatement where I work on a wide variety
             of interesting and meaningful projects on a daily basis.
-          </StyledPara>
-          <StyledPara>
-            Here are some main technologies I've been working with:
           </StyledPara>
         </div>
         <div>

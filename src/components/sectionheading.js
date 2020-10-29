@@ -1,10 +1,22 @@
 import React from "react"
 import styled from "styled-components"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+gsap.registerPlugin(ScrollTrigger)
 
 const StyledHeaderText = styled.h3`
   font-size: 1.4rem;
   font-weight: 700;
-  margin: 0 20px;
+  margin: 40px 15px;
+  @media (min-width: 790px) {
+    margin: 40px auto;
+    width: 75%;
+    font-size: 3vw;
+  }
+  @media (min-width: 1100px) {
+    width: 100%;
+    font-size: 33px;
+  }
 
   &::after {
     content: "";

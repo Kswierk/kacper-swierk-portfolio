@@ -204,7 +204,7 @@ const Navbar = () => {
           y: "+=200",
           autoAlpha: 1,
           opacity: 1,
-          delay: index / 8,
+          delay: index / 7,
           visibility: "visible",
           ease: "power1.inOut",
         }
