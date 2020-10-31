@@ -5,7 +5,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 gsap.registerPlugin(ScrollTrigger)
 
 const StyledHeaderText = styled.h3`
-  font-size: 1.4rem;
+  color: #ccd6f6;
+  font-size: 1.5rem;
   font-weight: 700;
   margin: 40px 15px;
   @media (min-width: 790px) {
@@ -13,9 +14,9 @@ const StyledHeaderText = styled.h3`
     width: 75%;
     font-size: 3vw;
   }
-  @media (min-width: 1100px) {
+  @media (min-width: 1000px) {
     width: 100%;
-    font-size: 33px;
+    font-size: 28px;
   }
 
   &::after {
@@ -26,7 +27,7 @@ const StyledHeaderText = styled.h3`
     width: 50%;
     height: 1px;
     margin-left: 20px;
-    background-color: #dadada;
+    background-color: #303c55;
   }
 `
 const StyledHeaderSpan = styled.span`
@@ -34,30 +35,13 @@ const StyledHeaderSpan = styled.span`
   font-size: 1.2rem;
   margin-right: 8px;
   color: #08ffc8;
+  font-weight: 400;
 `
 
 const SectionHeading = props => {
-  // useEffect(() => {
-  //   const sectionHeader = document.querySelectorAll(".sectionHeading")
-  //   sectionHeader.forEach(elem => {
-  //     gsap.fromTo(
-  //       elem,
-  //       {
-  //         y: "+=50",
-  //         opacity: 0,
-  //       },
-  //       {
-  //         y: 0,
-  //         opacity: 1,
-  //         duration: 0.5,
-  //         scrollTrigger: { trigger: elem, start: "top 70%" },
-  //       }
-  //     )
-  //   })
-  // }, [])
   return (
     <>
-      <StyledHeaderText className="sectionHeading">
+      <StyledHeaderText>
         <StyledHeaderSpan>{props.sectionNumber}</StyledHeaderSpan>
         {props.sectionName}
       </StyledHeaderText>

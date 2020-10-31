@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const CardWraper = styled.div`
   width: 90%;
-  height: 100%;
+  height: 60vw;
   margin: 80px auto;
   position: absolute;
   max-width: 900px;
@@ -20,12 +20,7 @@ const CardWraper = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  color: white;
-
-  @media (min-width: 500px) {
-    margin: 80px auto;
-    height: 45vw;
-  }
+  color: #ccd6f6;
 
   @media (min-width: 790px) {
     height: 22vw;
@@ -49,7 +44,7 @@ const CardWraper = styled.div`
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: rgba(106, 90, 205, 0.7);
+    background-color: RGBA(10, 25, 47, 0.8);
 
     @media (min-width: 790px) {
       display: none;
@@ -75,7 +70,7 @@ const StyledImg = styled.div`
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: rgba(106, 90, 205, 0.7);
+    background-color: rgba(100, 255, 218, 0.5);
     transition: all 0.2s ease-in-out;
     border-radius: 4px;
   }
@@ -94,7 +89,7 @@ const StyledH3 = styled.h3`
   z-index: 4;
   font-size: 1.3rem;
   font-weight: 700;
-
+  color: #e6f1ff;
   @media (min-width: 700px) {
     padding: 40px 0;
   }
@@ -139,7 +134,12 @@ const StyledTech = styled.p`
 const StyledLink = styled.a`
   z-index: 10;
   margin: 25px 7px;
-  fill: #08ffc8;
+  fill: #ccd6f6;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    fill: #08ffc8;
+  }
 `
 
 const IconsWraper = styled.div`
@@ -153,12 +153,9 @@ const InsideWraper = styled.div`
   justify-content: center;
   right: 0;
   position: relative;
-  align-items: flex-end;
+  align-items: ${props => (props.left ? "flex-start" : "flex-end")};
   margin: 15px;
 
-  @media (min-width: 790px) {
-    align-items: ${props => (props.left ? "flex-start" : "flex-end")};
-  }
   @media (min-width: 1000px) {
     width: 100%;
   }

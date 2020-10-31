@@ -9,9 +9,9 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1rem;
 }
   body, html {
-    background-color: #14274e;
+    background-color: #0a192f;
     font-family: "Montserrat", sans-serif;
-    color: #dadada;
+    color: #8892b0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;  
      }
@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
 export default function Layout({ children }) {
   return (
     <React.Fragment>
-      <GlobalStyle theme="purple" />
+      <GlobalStyle />
     </React.Fragment>
   )
 }

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import styled from "styled-components"
-import { data } from "./data"
+import { data } from "./socialsIconsData"
 import gsap from "gsap"
 
 const RightBar = styled.div`
@@ -20,7 +20,7 @@ const RightBar = styled.div`
     height: 140px;
     margin-top: 30px;
     margin-right: 2px;
-    background-color: #dadada;
+    background-color: #8892b0;
     transform: none;
   }
 
@@ -29,7 +29,7 @@ const RightBar = styled.div`
   }
 `
 const StyledMailLink = styled.a`
-  color: #dadada;
+  color: #8892b0;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   font-size: 0.9rem;
@@ -55,7 +55,7 @@ const LeftBar = styled.div`
     height: 140px;
     margin-top: 30px;
     margin-left: 8px;
-    background-color: #dadada;
+    background-color: #8892b0;
   }
   @media (min-width: 790px) and (min-height: 430px) {
     display: block;
@@ -68,7 +68,7 @@ const StyledLi = styled.li`
 
 const StyledLink = styled.a`
   text-decoration: none;
-  color: #dadada;
+  color: #8892b0; ;
 `
 
 const Sidebars = () => {

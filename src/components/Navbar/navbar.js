@@ -5,7 +5,7 @@ import { gsap } from "gsap"
 import logo from "../../assets/images/logo.jpg"
 
 const StyledNav = styled.nav`
-  background-color: RGBA(32, 73, 105, 0.7);
+  background-color: RGBA(10, 25, 47, 0.5);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -18,6 +18,7 @@ const StyledNav = styled.nav`
   transition: all 0.3s ease-in-out;
   box-shadow: ${props => (props.top ? null : "0 10px 30px -10px black")};
   visibility: hidden;
+  filter: blur(0px);
 
   @media screen and (max-width: 790px) {
     position: fixed;
@@ -54,7 +55,7 @@ const StyledUl = styled.ul`
     left: ${props => (props.active ? "0" : "-100%")};
     opacity: 1;
     transition: 0.3s ease;
-    background-color: #204969;
+    background-color: #172a45;
   }
 `
 
@@ -133,7 +134,7 @@ const StyledLink = styled.a`
   font-size: 0.9rem;
   border: ${props => (props.resume ? "1px solid #08ffc8" : null)};
   border-radius: ${props => (props.resume ? "4px" : null)};
-  color: ${props => (props.resume ? "#08ffc8" : "#dadada")};
+  color: ${props => (props.resume ? "#08ffc8" : "#ccd6f6")};
   transition: all 0.3s ease-out;
 
   &:hover {
@@ -160,10 +161,6 @@ const Logo = styled.img`
 const StyledSpan = styled.span`
   color: #08ffc8;
   font-size: 0.9rem;
-`
-
-const StyledLi = styled.li`
-  /* transition: all 0.5s ease-out; */
 `
 
 const Navbar = () => {
@@ -232,6 +229,23 @@ const Navbar = () => {
     prevScrollpos = currentScrollPos
   }
 
+  const body = document.querySelector("body")
+
+  // const showSideMenuUiSetter = () => {
+  //   // body.style.overflow = "hidden"
+  //   body.style.filter = "blur(3px)"
+  //   setClicked(!clicked)
+  // }
+  // const closeSideMenuUiSetter = () => {
+  //   setClicked(!clicked)
+  //   body.style.overflow = "initial"
+  // }
+  const blockSideMenuHandler = () => {
+    clicked
+      ? (body.style.overflow = "initial")
+      : (body.style.filter = "blur(3px)")
+  }
+
   return (
     <>
       <StyledNav top={isTop} scrolled={scroll} className="fadelink">
@@ -241,7 +255,9 @@ const Navbar = () => {
         <StyledBurger
           className="burger"
           hamburger={clicked}
-          onClick={() => setClicked(!clicked)}
+          onClick={() => {
+            setClicked(!clicked)
+          }}
         >
           <BurgerBox>
             <BurgerInner hamburger={clicked} />
@@ -250,12 +266,12 @@ const Navbar = () => {
         <StyledUl active={clicked}>
           {menuItems.map((item, index) => {
             return (
-              <StyledLi className={item.className} key={index}>
+              <li className={item.className} key={index}>
                 <StyledLink resume={item.resume} href={item.url}>
                   {item.resume ? null : <StyledSpan>0{index + 1}.</StyledSpan>}
                   {item.title}
                 </StyledLink>
-              </StyledLi>
+              </li>
             )
           })}
         </StyledUl>

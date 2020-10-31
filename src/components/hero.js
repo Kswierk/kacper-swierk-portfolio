@@ -3,6 +3,7 @@ import styled from "styled-components"
 import gsap from "gsap"
 
 const StyledBtn = styled.button`
+  font-size: 0.9rem;
   border: 1px solid #08ffc8;
   color: #08ffc8;
   background-color: transparent;
@@ -11,10 +12,11 @@ const StyledBtn = styled.button`
   margin-top: 50px;
   font-family: "Roboto Mono", monospace;
   cursor: pointer;
+  transition: all 0.2s ease-out;
 
   &:hover {
     background-color: RGBA(8, 255, 200, 0.2);
-    transition: all 0.1s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
 `
 
@@ -55,7 +57,7 @@ const HeroText = styled.div`
   padding: 20px 0;
   font-size: 2rem;
   font-family: "Montserrat", sans-serif;
-  color: #dadada;
+  color: #ccd6f6;
   font-weight: 700;
 
   @media (min-width: 500px) {
@@ -69,7 +71,6 @@ const HeroText = styled.div`
 const HeroTexth3 = styled.h3`
   font-size: 2rem;
   margin-top: 15px;
-  color: #dadada;
   font-weight: 700;
 
   @media (min-width: 500px) {
@@ -82,7 +83,6 @@ const HeroTexth3 = styled.h3`
 
 const StyledP = styled.p`
   font-family: "Montserrat", sans-serif;
-  color: #dadada;
   line-height: 1.8rem;
 
   @media (min-width: 500px) {
