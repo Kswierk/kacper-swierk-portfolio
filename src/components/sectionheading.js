@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -37,11 +37,31 @@ const StyledHeaderSpan = styled.span`
 `
 
 const SectionHeading = props => {
+  // useEffect(() => {
+  //   const sectionHeader = document.querySelectorAll(".sectionHeading")
+  //   sectionHeader.forEach(elem => {
+  //     gsap.fromTo(
+  //       elem,
+  //       {
+  //         y: "+=50",
+  //         opacity: 0,
+  //       },
+  //       {
+  //         y: 0,
+  //         opacity: 1,
+  //         duration: 0.5,
+  //         scrollTrigger: { trigger: elem, start: "top 70%" },
+  //       }
+  //     )
+  //   })
+  // }, [])
   return (
-    <StyledHeaderText>
-      <StyledHeaderSpan>{props.sectionNumber}</StyledHeaderSpan>
-      {props.sectionName}
-    </StyledHeaderText>
+    <>
+      <StyledHeaderText className="sectionHeading">
+        <StyledHeaderSpan>{props.sectionNumber}</StyledHeaderSpan>
+        {props.sectionName}
+      </StyledHeaderText>
+    </>
   )
 }
 

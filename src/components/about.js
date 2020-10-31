@@ -69,13 +69,13 @@ const About = () => {
     gsap.fromTo(
       triggerElement.children,
       {
-        y: "+=100",
+        y: "+=50",
         opacity: 0,
       },
       {
         y: 0,
         opacity: 1,
-        duration: 1,
+        duration: 0.5,
         scrollTrigger: { trigger: triggerElement, start: "top 70%" },
       }
     )

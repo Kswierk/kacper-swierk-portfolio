@@ -17,6 +17,7 @@ const StyledNav = styled.nav`
   top: ${props => (props.scrolled ? "-80px" : "0")};
   transition: all 0.3s ease-in-out;
   box-shadow: ${props => (props.top ? null : "0 10px 30px -10px black")};
+  visibility: hidden;
 
   @media screen and (max-width: 790px) {
     position: fixed;

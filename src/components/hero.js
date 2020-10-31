@@ -21,6 +21,7 @@ const StyledBtn = styled.button`
 const HeroWraper = styled.div`
   position: relative;
   height: 100vh;
+  visibility: hidden;
 `
 
 const Wraper = styled.div`
@@ -29,7 +30,7 @@ const Wraper = styled.div`
   position: relative;
   transform: translateY(-50%);
 
-  @media (max-height: 530px) {
+  @media (max-height: 630px) {
     position: relative;
     top: 80px;
     transform: none;
@@ -102,15 +103,21 @@ const Hero = () => {
     const fadeElements = document.querySelectorAll(".fadeElement")
 
     fadeElements.forEach((elem, index) => {
-      gsap.set(elem, { autoAlpha: 0 })
+      // gsap.set(elem, { autoAlpha: 0 })
 
       gsap.fromTo(
         elem,
-        { y: "+=50" },
-        { y: "-=50", autoAlpha: 1, delay: 1 + index / 8, duration: 1.2 }
+        { y: "+=50", opacity: 0 },
+        {
+          y: "-=50",
+          opacity: 1,
+          delay: 1 + index / 8,
+          duration: 1.2,
+          visibility: "visible",
+        }
       )
     })
-  })
+  }, [])
   return (
     <HeroWraper>
       <Wraper>
@@ -125,7 +132,7 @@ const Hero = () => {
           I'm a front end developer based in Cracow, Poland. I like building
           useful websites, applications and everything in between.
         </StyledP>
-        <StyledBtn className="fadeElement">Check my work!</StyledBtn>
+        <StyledBtn className="fadeElement">Check my work</StyledBtn>
       </Wraper>
     </HeroWraper>
   )

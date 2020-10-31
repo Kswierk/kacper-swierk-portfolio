@@ -7,10 +7,11 @@ const RightBar = styled.div`
   position: fixed;
   display: none;
   bottom: 0;
-  right: 60px;
+  right: 40px;
   writing-mode: vertical-lr;
   text-decoration: none;
   font-family: "Roboto Mono", monospace;
+  visibility: hidden;
 
   &:after {
     content: "";
@@ -44,7 +45,9 @@ const LeftBar = styled.div`
   position: fixed;
   display: none;
   bottom: -4px;
-  left: 60px;
+  left: 40px;
+  visibility: hidden;
+
   &:after {
     content: "";
     display: inline-block;
@@ -73,7 +76,11 @@ const Sidebars = () => {
     const elements = document.querySelectorAll(".sidebar")
 
     elements.forEach(elem => {
-      gsap.fromTo(elem, { opacity: 0 }, { opacity: 1, delay: 2, duration: 1 })
+      gsap.fromTo(
+        elem,
+        { opacity: 0 },
+        { opacity: 1, delay: 2, duration: 1, visibility: "visible" }
+      )
     })
   }, [])
   return (

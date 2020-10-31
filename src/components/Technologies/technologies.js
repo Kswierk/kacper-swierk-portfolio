@@ -1,15 +1,14 @@
 import React, { useEffect } from "react"
 import SectionHeading from "../sectionheading"
-import { svgs } from "./svgs"
+import styled from "styled-components"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
-import styled from "styled-components"
 gsap.registerPlugin(ScrollTrigger)
 
 const Wraper = styled.div`
   max-width: 700px;
-  margin: 200px auto;
+  margin: 150px auto;
   position: relative;
   @media (min-width: 1300px) {
     /* left: 150px; */
@@ -79,13 +78,13 @@ const Technologies = () => {
     gsap.fromTo(
       triggerElement.children,
       {
-        y: "+=100",
+        y: "+=50",
         opacity: 0,
       },
       {
         y: 0,
         opacity: 1,
-        duration: 1,
+        duration: 0.5,
         scrollTrigger: { trigger: triggerElement, start: "top 70%" },
       }
     )
@@ -106,22 +105,22 @@ const Technologies = () => {
             <div>
               <StyledLi>HTML</StyledLi>
               <StyledLi>(S)CSS</StyledLi>
-              <StyledLi>BEM</StyledLi>
-              <StyledLi>Mobile First</StyledLi>
               <StyledLi>JavaScript (ES6+)</StyledLi>
               <StyledLi>React &amp; Hooks</StyledLi>
               <StyledLi>Redux</StyledLi>
               <StyledLi>Gatsby</StyledLi>
+              <StyledLi>Axios</StyledLi>
+              <StyledLi>Jest</StyledLi>
             </div>
             <div>
-              <StyledLi>Jest</StyledLi>
               <StyledLi>GSAP</StyledLi>
               <StyledLi>CSS Modules</StyledLi>
               <StyledLi>Styled Components</StyledLi>
-              <StyledLi>Axios</StyledLi>
               <StyledLi>Docker</StyledLi>
               <StyledLi>Postman</StyledLi>
               <StyledLi>Git</StyledLi>
+              <StyledLi>BEM</StyledLi>
+              <StyledLi>Mobile First</StyledLi>
             </div>
           </StyledUl>
         </FlexWraper>
