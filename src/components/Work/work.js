@@ -36,7 +36,7 @@ const Work = () => {
   }, [])
   return (
     <>
-      <Wraper className="heder">
+      <Wraper id="work" className="heder">
         <SectionHeading sectionNumber="03." sectionName="My Projects" />
       </Wraper>
       <ProjectCard />

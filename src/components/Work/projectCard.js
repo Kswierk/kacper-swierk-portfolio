@@ -60,7 +60,7 @@ const StyledImg = styled.div`
   position: absolute;
   display: none;
   height: 100%;
-  width: 40vw;
+  width: 35vw;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 4px;
@@ -105,7 +105,7 @@ const StyledText = styled.p`
     width: 80%;
   }
   @media (min-width: 790px) {
-    background-color: gray;
+    background-color: #172a45;
     padding: 15px;
     width: 70%;
     margin: 10px 0;

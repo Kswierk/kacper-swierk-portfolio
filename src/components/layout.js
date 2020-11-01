@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
     color: #8892b0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;  
+    /* position: relative; */
      }
 `
 export default function Layout({ children }) {

@@ -1,22 +1,22 @@
 export const menuItems = [
   {
     title: " About",
-    url: "#",
+    url: "about",
     className: "fadelink",
   },
   {
     title: " Technologies",
-    url: "#",
+    url: "technologies",
     className: "fadelink",
   },
   {
     title: " Work",
-    url: "#",
+    url: "work",
     className: "fadelink",
   },
   {
     title: " Contact",
-    url: "#",
+    url: "contact",
     className: "fadelink",
   },
   {
@@ -24,6 +24,6 @@ export const menuItems = [
     url: "#",
     className: "fadelink",
 
-    resume: true,
+    resume: "true",
   },
 ]

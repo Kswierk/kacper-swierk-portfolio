@@ -9,18 +9,20 @@ import Work from "../components/Work/work"
 import Contact from "../components/contact"
 import Footer from "../components/footer"
 
-const IndexPage = () => (
-  <>
-    <Layout />
-    <Navbar />
-    <Hero />
-    <Sidebars />
-    <About />
-    <Technologies />
-    <Work />
-    <Contact />
-    <Footer />
-  </>
-)
+const IndexPage = () => {
+  return (
+    <>
+      <Layout />
+      <Navbar />
+      <Hero />
+      <Sidebars />
+      <About />
+      <Technologies />
+      <Work />
+      <Contact />
+      <Footer />
+    </>
+  )
+}
 
 export default IndexPage

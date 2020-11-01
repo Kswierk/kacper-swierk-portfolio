@@ -68,7 +68,7 @@ const StyledLi = styled.li`
 
 const StyledLink = styled.a`
   text-decoration: none;
-  color: #8892b0; ;
+  color: #8892b0;
 `
 
 const Sidebars = () => {

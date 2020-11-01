@@ -100,7 +100,7 @@ const Contact = () => {
     })
   }, [])
   return (
-    <Wraper className="contactTrigger">
+    <Wraper id="contact" className="contactTrigger">
       <StyledH3>04. What's Next?</StyledH3>
       <StyledH2>Get In Touch</StyledH2>
       <StyledP>

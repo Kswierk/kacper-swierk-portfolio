@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { menuItems } from "./menuItems"
 import styled from "styled-components"
 import { gsap } from "gsap"
-import logo from "../../assets/images/logo.jpg"
+import logo from "../../assets/images/logo.png"
+import Backdrop from "./backdrop"
+import { Link } from "react-scroll"
 
 const StyledNav = styled.nav`
   background-color: RGBA(10, 25, 47, 0.5);
@@ -18,7 +20,6 @@ const StyledNav = styled.nav`
   transition: all 0.3s ease-in-out;
   box-shadow: ${props => (props.top ? null : "0 10px 30px -10px black")};
   visibility: hidden;
-  filter: blur(0px);
 
   @media screen and (max-width: 790px) {
     position: fixed;
@@ -27,7 +28,8 @@ const StyledNav = styled.nav`
 `
 
 const LogoContainer = styled.div`
-  height: 50px;
+  /* height: 50px; */
+  width: 350px;
   justify-self: start;
   cursor: pointer;
   margin-left: 20px;
@@ -41,7 +43,6 @@ const StyledUl = styled.ul`
   width: 80vw;
   justify-content: end;
   margin-right: 2rem;
-  /* background-color: RGBA(218, 218, 218, 0.5); */
 
   @media screen and (max-width: 790px) {
     background-color: RGBA(218, 218, 218, 0.5);
@@ -126,12 +127,13 @@ const BurgerInner = styled.span`
   }
 `
 
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
   font-family: "Roboto Mono", monospace;
+  cursor: pointer;
 
   text-decoration: none;
   padding: 0.5rem 0.8rem;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   border: ${props => (props.resume ? "1px solid #08ffc8" : null)};
   border-radius: ${props => (props.resume ? "4px" : null)};
   color: ${props => (props.resume ? "#08ffc8" : "#ccd6f6")};
@@ -145,6 +147,7 @@ const StyledLink = styled.a`
   }
 
   @media screen and (max-width: 790px) {
+    font-size: 1rem;
     text-align: center;
     padding: ${props => (props.resume ? "1rem" : "2rem")};
     width: 100%;
@@ -155,7 +158,8 @@ const StyledLink = styled.a`
 `
 
 const Logo = styled.img`
-  height: 50px;
+  /* height: 50px; */
+  width: 100%;
 `
 
 const StyledSpan = styled.span`
@@ -231,19 +235,20 @@ const Navbar = () => {
 
   const body = document.querySelector("body")
 
-  // const showSideMenuUiSetter = () => {
-  //   // body.style.overflow = "hidden"
-  //   body.style.filter = "blur(3px)"
-  //   setClicked(!clicked)
-  // }
-  // const closeSideMenuUiSetter = () => {
-  //   setClicked(!clicked)
-  //   body.style.overflow = "initial"
-  // }
   const blockSideMenuHandler = () => {
     clicked
       ? (body.style.overflow = "initial")
-      : (body.style.filter = "blur(3px)")
+      : (body.style.overflow = "hidden")
+  }
+
+  const showSideMenuHandler = () => {
+    setClicked(!clicked)
+    blockSideMenuHandler()
+  }
+
+  const closeSideMenuHandler = () => {
+    setClicked(false)
+    body.style.overflow = "initial"
   }
 
   return (
@@ -255,9 +260,7 @@ const Navbar = () => {
         <StyledBurger
           className="burger"
           hamburger={clicked}
-          onClick={() => {
-            setClicked(!clicked)
-          }}
+          onClick={showSideMenuHandler}
         >
           <BurgerBox>
             <BurgerInner hamburger={clicked} />
@@ -267,7 +270,14 @@ const Navbar = () => {
           {menuItems.map((item, index) => {
             return (
               <li className={item.className} key={index}>
-                <StyledLink resume={item.resume} href={item.url}>
+                <StyledLink
+                  resume={item.resume}
+                  to={item.url}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                  onClick={closeSideMenuHandler}
+                >
                   {item.resume ? null : <StyledSpan>0{index + 1}.</StyledSpan>}
                   {item.title}
                 </StyledLink>
@@ -276,6 +286,7 @@ const Navbar = () => {
           })}
         </StyledUl>
       </StyledNav>
+      <Backdrop show={clicked} clicked={showSideMenuHandler} />
     </>
   )
 }

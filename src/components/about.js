@@ -82,7 +82,7 @@ const About = () => {
   }, [])
 
   return (
-    <Wraper className="scrollTriggered">
+    <Wraper id="about" className="scrollTriggered">
       <SectionHeading sectionNumber="01." sectionName="About Me" />
       <SectionWraper>
         <div>

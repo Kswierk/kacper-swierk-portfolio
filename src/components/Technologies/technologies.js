@@ -91,7 +91,7 @@ const Technologies = () => {
   }, [])
   return (
     <>
-      <Wraper className="technologiesTrigger">
+      <Wraper id="technologies" className="technologiesTrigger">
         <SectionHeading sectionNumber="02." sectionName="Technologies">
           Technologies
         </SectionHeading>
@@ -116,7 +116,7 @@ const Technologies = () => {
               <StyledLi>GSAP</StyledLi>
               <StyledLi>CSS Modules</StyledLi>
               <StyledLi>Styled Components</StyledLi>
-              <StyledLi>Docker</StyledLi>
+              <StyledLi>Firebase</StyledLi>
               <StyledLi>Postman</StyledLi>
               <StyledLi>Git</StyledLi>
               <StyledLi>BEM</StyledLi>

@@ -4,7 +4,7 @@ import styled from "styled-components"
 const StyledSvg = styled.svg`
   transition: all 0.2s ease-in-out;
   margin-top: 25px;
-  fill: #ccd6f6;
+  fill: #8892b0;
 
   &:hover {
     transform: translateY(-4px);

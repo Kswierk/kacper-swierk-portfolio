@@ -1,8 +1,9 @@
 import React, { useEffect } from "react"
 import styled from "styled-components"
 import gsap from "gsap"
+import { Link } from "react-scroll"
 
-const StyledBtn = styled.button`
+const StyledLink = styled(Link)`
   font-size: 0.9rem;
   border: 1px solid #08ffc8;
   color: #08ffc8;
@@ -10,6 +11,7 @@ const StyledBtn = styled.button`
   padding: 1rem 2rem;
   border-radius: 4px;
   margin-top: 50px;
+  display: inline-block;
   font-family: "Roboto Mono", monospace;
   cursor: pointer;
   transition: all 0.2s ease-out;
@@ -72,6 +74,7 @@ const HeroTexth3 = styled.h3`
   font-size: 2rem;
   margin-top: 15px;
   font-weight: 700;
+  color: #8892b0;
 
   @media (min-width: 500px) {
     font-size: 6vw;
@@ -109,7 +112,7 @@ const Hero = () => {
         elem,
         { y: "+=50", opacity: 0 },
         {
-          y: "-=50",
+          y: "0",
           opacity: 1,
           delay: 1 + index / 8,
           duration: 1.2,
@@ -132,7 +135,15 @@ const Hero = () => {
           I'm a front end developer based in Cracow, Poland. I like building
           useful websites, applications and everything in between.
         </StyledP>
-        <StyledBtn className="fadeElement">Check my work</StyledBtn>
+        <StyledLink
+          to={"work"}
+          smooth={true}
+          duration={500}
+          offset={-100}
+          className="fadeElement"
+        >
+          Check my work
+        </StyledLink>
       </Wraper>
     </HeroWraper>
   )
