@@ -91,15 +91,19 @@ const About = () => {
             <StyledSpan>based in Cracow, Poland.</StyledSpan>
           </StyledPara>
           <StyledPara>
-            I enjoy creating things that live on the internet, whether that be
-            websites, applications, or anything in between. My goal is to always
-            build products that provide pixel-perfect, performant experiences
+            Shortly after graduating from
+            <StyledSpan>Cracow University of Technology</StyledSpan>, I started
+            to ask myself a question - what I want to do with in my career ? and
+            then I just started to programming. My main professional goal right
+            now is to find a job that will give me an opportunity to improve my
+            programming skills and engage in interesting and meaningful
+            projects.
           </StyledPara>
           <StyledPara>
-            Shortly after graduating from
-            <StyledSpan>Cracow University of Technology</StyledSpan>, I joined
-            the engineering team at Upstatement where I work on a wide variety
-            of interesting and meaningful projects on a daily basis.
+            <StyledSpan>On a personal level,</StyledSpan> I am self-motivated,
+            goal oriented, fast learner and constantly seeking to improve my
+            skills. In my spare time I do combat sports and train at the gym, it
+            keeps me motivated, creative and well.
           </StyledPara>
         </div>
         <div>

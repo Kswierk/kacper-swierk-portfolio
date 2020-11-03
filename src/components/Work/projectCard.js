@@ -169,11 +169,11 @@ const ProjectCard = () => {
       gsap.fromTo(
         elem,
         {
-          y: "+=50",
+          x: "+=100",
           opacity: 0,
         },
         {
-          y: 0,
+          x: 0,
           opacity: 1,
           duration: 0.5,
           scrollTrigger: { trigger: elem, start: "top 70%" },

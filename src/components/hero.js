@@ -92,7 +92,7 @@ const StyledP = styled.p`
     width: 70%;
   }
   @media (min-width: 900px) {
-    width: 60%;
+    width: 45%;
   }
 `
 
@@ -132,7 +132,7 @@ const Hero = () => {
           </HeroTexth3>
         </HeroText>
         <StyledP className="fadeElement">
-          I'm a front end developer based in Cracow, Poland. I like building
+          I'm a front end developer based in Cracow, Poland. I enjoy building
           useful websites, applications and everything in between.
         </StyledP>
         <StyledLink

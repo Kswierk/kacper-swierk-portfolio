@@ -23,17 +23,17 @@ const StyledH3 = styled.h3`
   color: #08ffc8;
   font-family: "Roboto Mono", monospace;
   font-weight: 400;
-  font-size: 1.1rem;
+  font-size: 1rem;
 `
 
 const StyledH2 = styled.h2`
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   padding: 20px 0;
   color: #ccd6f6;
 `
 
 const StyledP = styled.p`
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.7rem;
   margin: 0 10px 30px 10px;
 
@@ -104,9 +104,9 @@ const Contact = () => {
       <StyledH3>04. What's Next?</StyledH3>
       <StyledH2>Get In Touch</StyledH2>
       <StyledP>
-        Currently I am looking for opportunity to start a new job and expand my
-        commercial experience. If you have any questions, feel free to contact
-        me via any media!
+        Currently I am looking for an opportunity to start a new job and expand
+        my commercial experience. If you have any questions, feel free to
+        contact me via any media!
       </StyledP>
       <StatusWraper>
         <StatusInnerWraper>

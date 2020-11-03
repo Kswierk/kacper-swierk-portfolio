@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from "react"
+import React, { useState, useEffect } from "react"
 import { menuItems } from "./menuItems"
 import styled from "styled-components"
 import { gsap } from "gsap"
-import logo from "../../assets/images/logo.png"
+import logo from "../../assets/images/logo.jpg"
 import Backdrop from "./backdrop"
 import { Link } from "react-scroll"
 
@@ -28,11 +28,11 @@ const StyledNav = styled.nav`
 `
 
 const LogoContainer = styled.div`
-  /* height: 50px; */
-  width: 350px;
+  height: 50px;
+  /* width: 350px; */
   justify-self: start;
   cursor: pointer;
-  margin-left: 20px;
+  margin-left: 40px;
 `
 const StyledUl = styled.ul`
   display: grid;
@@ -52,7 +52,7 @@ const StyledUl = styled.ul`
     width: 70%;
     position: absolute;
     height: 100vh;
-    top: 0px;
+    top: 0;
     left: ${props => (props.active ? "0" : "-100%")};
     opacity: 1;
     transition: 0.3s ease;
@@ -64,7 +64,7 @@ const StyledBurger = styled.button`
   position: absolute;
   top: 40px;
   transform: translateY(-50%);
-  right: 5px;
+  right: 40px;
   padding: 10px;
   display: inline-block;
   background-color: transparent;
@@ -158,8 +158,8 @@ const StyledLink = styled(Link)`
 `
 
 const Logo = styled.img`
-  /* height: 50px; */
-  width: 100%;
+  height: 100%;
+  /* width: 100%; */
 `
 
 const StyledSpan = styled.span`
@@ -170,7 +170,7 @@ const StyledSpan = styled.span`
 const Navbar = () => {
   const [clicked, setClicked] = useState(false)
   const [scroll, setScroll] = useState(false)
-  const [isTop, setisTop] = useState(false)
+  const [isTop, setisTop] = useState(true)
 
   useEffect(() => {
     const links = document.querySelectorAll(".fadelink")
@@ -180,9 +180,8 @@ const Navbar = () => {
       burger,
       {
         opacity: 0,
-        duration: 1,
       },
-      { autoAlpha: 1, opacity: 1 }
+      { autoAlpha: 1, opacity: 1, duration: 1 }
     )
     gsap.fromTo(
       logo,
@@ -206,7 +205,7 @@ const Navbar = () => {
           y: "+=200",
           autoAlpha: 1,
           opacity: 1,
-          delay: index / 7,
+          delay: index / 6,
           visibility: "visible",
           ease: "power1.inOut",
         }
