@@ -44,7 +44,6 @@ const SectionWraper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* justify-content: space-between; */
   margin: 10px 15px;
 
   @media (min-width: 790px) {

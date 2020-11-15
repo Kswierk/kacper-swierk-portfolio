@@ -11,7 +11,6 @@ const Wraper = styled.div`
   margin: 150px auto;
   position: relative;
   @media (min-width: 1300px) {
-    /* left: 150px; */
   }
 `
 const StyledH3 = styled.h3`

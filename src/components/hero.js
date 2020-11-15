@@ -106,8 +106,6 @@ const Hero = () => {
     const fadeElements = document.querySelectorAll(".fadeElement")
 
     fadeElements.forEach((elem, index) => {
-      // gsap.set(elem, { autoAlpha: 0 })
-
       gsap.fromTo(
         elem,
         { y: "+=50", opacity: 0 },

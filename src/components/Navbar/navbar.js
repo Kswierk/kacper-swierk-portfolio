@@ -17,7 +17,7 @@ const StyledNav = styled.nav`
   position: fixed;
   backdrop-filter: blur(10px);
   top: ${props => (props.scrolled ? "-80px" : "0")};
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in;
   box-shadow: ${props => (props.top ? null : "0 10px 30px -10px black")};
   visibility: hidden;
 
@@ -29,7 +29,6 @@ const StyledNav = styled.nav`
 
 const LogoContainer = styled.div`
   height: 50px;
-  /* width: 350px; */
   justify-self: start;
   cursor: pointer;
   margin-left: 40px;

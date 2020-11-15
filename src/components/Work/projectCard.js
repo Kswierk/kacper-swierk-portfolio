@@ -204,30 +204,6 @@ const ProjectCard = () => {
           </a>
         </CardWraper>
       ))}
-
-      {/* <CardWraper>
-        <InsideWraper left={props.left}>
-          <StyledH3>Projekt Pierwszy</StyledH3>
-          <StyledText>
-            A nicer look at your github profielA nicer look at your github
-            profielA nicer look at your github profiel A nicer look at your
-            github profiel
-          </StyledText>
-          <FlexWraper>
-            <StyledTech>Next.js</StyledTech>
-            <StyledTech>Next.js</StyledTech>
-            <StyledTech>Next.js</StyledTech>
-            <StyledTech>Next.js</StyledTech>
-          </FlexWraper>
-          <IconsWraper>
-            <StyledLink href="#">{githubSvg}</StyledLink>
-            <a href="#">{outSideSvg}</a>
-          </IconsWraper>
-        </InsideWraper>
-        <a href="#">
-          <StyledImg left={props.left} src={projectImage} />
-        </a>
-      </CardWraper> */}
     </>
   )
 }
