@@ -15,6 +15,7 @@ const StyledSvg = styled.svg`
 export const data = [
   {
     title: "linkedin",
+    link: "https://www.linkedin.com/in/kswierkDev/",
     element: (
       <StyledSvg
         id="Bold"
@@ -32,6 +33,7 @@ export const data = [
   },
   {
     title: "github",
+    link: "https://github.com/Kswierk",
     element: (
       <StyledSvg
         id="Bold"
@@ -47,6 +49,7 @@ export const data = [
   },
   {
     title: "facebook",
+    link: "https://www.facebook.com/kacper.swierk/",
     element: (
       <StyledSvg
         id="Bold"

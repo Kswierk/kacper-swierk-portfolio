@@ -90,7 +90,9 @@ const Sidebars = () => {
           {data.map(elem => {
             return (
               <StyledLi key={elem.title}>
-                <StyledLink href="#">{elem.element}</StyledLink>
+                <StyledLink target="_blank" href={elem.link}>
+                  {elem.element}
+                </StyledLink>
               </StyledLi>
             )
           })}

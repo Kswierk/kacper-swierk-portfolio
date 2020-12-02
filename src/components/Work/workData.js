@@ -3,7 +3,7 @@ export const outSideSvg = (
   <svg
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
-    xmlns="http://www.w3.org/1999/xlink"
+    // xmlns="http://www.w3.org/1999/xlink"
     width="23"
     height="23"
     fontWeight="bold"
