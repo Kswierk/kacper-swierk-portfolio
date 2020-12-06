@@ -212,17 +212,22 @@ const Navbar = () => {
     })
   }, [])
 
-  let prevScrollpos = window.pageYOffset
-  window.onscroll = () => {
+  const windowPageYOffset = typeof window !== "undefined" && window.pageYOffset
+  let windowOnScroll = typeof window !== "undefined" && window.onscroll
+  let bodySelector =
+    typeof body !== "undefined" && document.querySelector("body")
+
+  let prevScrollpos = windowPageYOffset
+  windowOnScroll = () => {
     if (scroll) {
       setisTop(true)
     } else setisTop(false)
-    if (window.pageYOffset === 0) {
+    if (windowPageYOffset === 0) {
       setisTop(true)
     } else {
       setisTop(false)
     }
-    let currentScrollPos = window.pageYOffset
+    let currentScrollPos = windowPageYOffset
     if (prevScrollpos > currentScrollPos) {
       setScroll(false)
     } else {
@@ -231,12 +236,12 @@ const Navbar = () => {
     prevScrollpos = currentScrollPos
   }
 
-  const body = document.querySelector("body")
+  // const body = document.querySelector("body")
 
   const blockSideMenuHandler = () => {
     clicked
-      ? (body.style.overflow = "initial")
-      : (body.style.overflow = "hidden")
+      ? (bodySelector.style.overflow = "initial")
+      : (bodySelector.style.overflow = "hidden")
   }
 
   const showSideMenuHandler = () => {
@@ -246,7 +251,7 @@ const Navbar = () => {
 
   const closeSideMenuHandler = () => {
     setClicked(false)
-    body.style.overflow = "initial"
+    bodySelector.style.overflow = "initial"
   }
 
   return (

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import styled from "styled-components"
-import projectImage from "../../assets/images/kacper.jpg"
+// import projectImage from "../../assets/images/kacper.jpg"
+import obliczmakro from "../../assets/images/obliczmakro.jpg"
 import { outSideSvg, githubSvg } from "./workData"
 import { projects } from "./workData"
 
@@ -15,7 +16,7 @@ const CardWraper = styled.div`
   margin: 80px auto;
   position: absolute;
   max-width: 900px;
-  background-image: url(${projectImage});
+  /* background-image: url(${obliczmakro}); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -25,7 +26,7 @@ const CardWraper = styled.div`
   @media (min-width: 790px) {
     height: 22vw;
     margin: 0 auto 130px auto;
-    background: none;
+    background: none !important;
     width: 75%;
   }
   @media (min-width: 1000px) {
@@ -53,7 +54,7 @@ const CardWraper = styled.div`
 `
 
 const StyledImg = styled.div`
-  background-image: url(${projectImage});
+  /* background-image: url(${obliczmakro}); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -185,7 +186,11 @@ const ProjectCard = () => {
   return (
     <>
       {projects.map((elem, index) => (
-        <CardWraper className="cardTrigger" key={index}>
+        <CardWraper
+          className="cardTrigger"
+          key={index}
+          style={{ backgroundImage: `url(${elem.src})` }}
+        >
           <InsideWraper left={elem.left}>
             <StyledH3>{elem.title}</StyledH3>
             <StyledText left={elem.left}>{elem.description}</StyledText>
@@ -200,7 +205,10 @@ const ProjectCard = () => {
             </IconsWraper>
           </InsideWraper>
           <a href={elem.outsideLink}>
-            <StyledImg left={elem.left} src={projectImage} />
+            <StyledImg
+              left={elem.left}
+              style={{ backgroundImage: `url(${elem.src})` }}
+            />
           </a>
         </CardWraper>
       ))}

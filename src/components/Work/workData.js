@@ -1,4 +1,6 @@
 import React from "react"
+import obliczmakro from "../../assets/images/obliczmakro.jpg"
+
 export const outSideSvg = (
   <svg
     version="1.1"
@@ -29,12 +31,13 @@ export const githubSvg = (
 
 export const projects = [
   {
-    title: "projekt pierwszy",
+    title: "Daily Calories Intake Calculator",
     description:
-      "Etizzle sizzle pizzle ut nisl. Check it out quis arcu. Ass pulvinar, boom shackalack boofron malesuada fizzle, nulla fo shizzle my nizzle euismizzle pot, ",
-    technologies: ["next.js", "react", "javascript"],
-    githubLink: "#",
-    outsideLink: "#",
+      "Provide some of your body parameters to calculate your daily calories intake. BMR calc also counts your macronutrients depending on your goals. Also it shows your BMI and ideal body weight based on most efficient formulas",
+    technologies: ["JavaScript", "SCSS", "RWD"],
+    githubLink: "https://github.com/Kswierk/BMR-calc",
+    outsideLink: "https://kswierk.github.io/BMR-calc/",
+    src: obliczmakro,
     left: false,
   },
   {
