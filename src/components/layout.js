@@ -8,6 +8,11 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-size: 1rem;
 }
+
+body{
+  overflow-x: hidden;
+
+}
   body, html {
     background-color: #0a192f;
     font-family: "Montserrat", sans-serif;

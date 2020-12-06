@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react"
-import { menuItems } from "./menuItems"
 import styled from "styled-components"
 import { gsap } from "gsap"
+
+import { menuItems } from "./menuItems"
 import logo from "../../assets/images/logo.jpg"
 import Backdrop from "./backdrop"
 import { Link } from "react-scroll"
@@ -170,6 +171,7 @@ const Navbar = () => {
   const [clicked, setClicked] = useState(false)
   const [scroll, setScroll] = useState(false)
   const [isTop, setisTop] = useState(true)
+  const [body, setBody] = useState("")
 
   useEffect(() => {
     const links = document.querySelectorAll(".fadelink")
@@ -212,36 +214,38 @@ const Navbar = () => {
     })
   }, [])
 
-  const windowPageYOffset = typeof window !== "undefined" && window.pageYOffset
-  let windowOnScroll = typeof window !== "undefined" && window.onscroll
-  let bodySelector =
-    typeof body !== "undefined" && document.querySelector("body")
+  const windowGlobal = typeof window !== "undefined" && window
+  useEffect(() => {
+    let prevScrollpos = windowGlobal.pageYOffset
+    windowGlobal.onscroll = () => {
+      if (scroll) {
+        setisTop(true)
+      } else setisTop(false)
+      if (windowGlobal.pageYOffset === 0) {
+        setisTop(true)
+      } else {
+        setisTop(false)
+      }
+      let currentScrollPos = windowGlobal.pageYOffset
+      if (prevScrollpos > currentScrollPos) {
+        setScroll(false)
+      } else {
+        setScroll(true)
+      }
+      prevScrollpos = currentScrollPos
+    }
+  })
 
-  let prevScrollpos = windowPageYOffset
-  windowOnScroll = () => {
-    if (scroll) {
-      setisTop(true)
-    } else setisTop(false)
-    if (windowPageYOffset === 0) {
-      setisTop(true)
-    } else {
-      setisTop(false)
-    }
-    let currentScrollPos = windowPageYOffset
-    if (prevScrollpos > currentScrollPos) {
-      setScroll(false)
-    } else {
-      setScroll(true)
-    }
-    prevScrollpos = currentScrollPos
-  }
+  useEffect(() => {
+    setBody(document.querySelector("body"))
+  }, [])
 
   // const body = document.querySelector("body")
 
   const blockSideMenuHandler = () => {
     clicked
-      ? (bodySelector.style.overflow = "initial")
-      : (bodySelector.style.overflow = "hidden")
+      ? (body.style.overflowY = "initial")
+      : (body.style.overflowY = "hidden")
   }
 
   const showSideMenuHandler = () => {
@@ -251,7 +255,7 @@ const Navbar = () => {
 
   const closeSideMenuHandler = () => {
     setClicked(false)
-    bodySelector.style.overflow = "initial"
+    body.style.overflow = "initial"
   }
 
   return (
