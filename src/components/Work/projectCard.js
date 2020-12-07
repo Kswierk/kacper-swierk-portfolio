@@ -11,9 +11,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 gsap.registerPlugin(ScrollTrigger)
 
 const CardWraper = styled.div`
-  /* width: 80%; */
-  height: 60vw;
+  width: 85%;
+  /* height: 50vw; */
   margin: 80px auto;
+  border-radius: 4px;
   /* position: absolute; */
   max-width: 900px;
   background-position: center;
@@ -122,12 +123,13 @@ const StyledText = styled.p`
 
 const FlexWraper = styled.div`
   display: flex;
-  margin: 10px 0;
+  /* align-items: center; */
+  margin: 20px 0 5px 0;
   font-family: "Roboto Mono", monospace;
 `
 
 const StyledTech = styled.p`
-  margin: 0 0 13px 5px;
+  margin: 0 0 15px 5px;
   font-size: 0.8rem;
   z-index: 222;
 `
