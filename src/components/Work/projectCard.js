@@ -11,16 +11,16 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 gsap.registerPlugin(ScrollTrigger)
 
 const CardWraper = styled.div`
-  width: 90%;
+  /* width: 80%; */
   height: 60vw;
   margin: 80px auto;
-  position: absolute;
+  /* position: absolute; */
   max-width: 900px;
-  /* background-image: url(${obliczmakro}); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+
   color: #ccd6f6;
 
   @media (min-width: 790px) {
@@ -172,11 +172,13 @@ const ProjectCard = () => {
         {
           x: "+=100",
           opacity: 0,
+          display: "none",
         },
         {
           x: 0,
           opacity: 1,
           duration: 0.5,
+          display: "block",
           scrollTrigger: { trigger: elem, start: "top 70%" },
         }
       )
@@ -186,12 +188,8 @@ const ProjectCard = () => {
   return (
     <>
       {projects.map((elem, index) => (
-        <CardWraper
-          className="cardTrigger"
-          key={index}
-          style={{ backgroundImage: `url(${elem.src})` }}
-        >
-          <InsideWraper left={elem.left}>
+        <CardWraper key={index} style={{ backgroundImage: `url(${elem.src})` }}>
+          <InsideWraper left={elem.left} className="cardTrigger">
             <StyledH3>{elem.title}</StyledH3>
             <StyledText left={elem.left}>{elem.description}</StyledText>
             <FlexWraper>
