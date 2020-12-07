@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import styled from "styled-components"
 // import projectImage from "../../assets/images/kacper.jpg"
-import obliczmakro from "../../assets/images/obliczmakro.jpg"
+import obliczmakro from "../../images/obliczmakro.jpg"
 import { outSideSvg, githubSvg } from "./workData"
 import { projects } from "./workData"
 

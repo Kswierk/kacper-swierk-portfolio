@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import styled from "styled-components"
 import SectionHeading from "../components/sectionheading"
-import Image from "../assets/images/kacper.jpg"
+import Image from "../images/kacper.jpg"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 

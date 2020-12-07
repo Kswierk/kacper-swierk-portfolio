@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { gsap } from "gsap"
 
 import { menuItems } from "./menuItems"
-import logo from "../../assets/images/logo.jpg"
+import logo from "../../images/logo.jpg"
 import Backdrop from "./backdrop"
 import { Link } from "react-scroll"
 

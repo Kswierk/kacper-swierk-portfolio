@@ -1,5 +1,5 @@
 import React from "react"
-import obliczmakro from "../../assets/images/obliczmakro.jpg"
+import obliczmakro from "../../images/obliczmakro.jpg"
 
 export const outSideSvg = (
   <svg
