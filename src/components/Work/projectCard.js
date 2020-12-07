@@ -165,27 +165,27 @@ const InsideWraper = styled.div`
 `
 
 const ProjectCard = () => {
-  useEffect(() => {
-    const triggerElement = document.querySelectorAll(".cardTrigger")
+  // useEffect(() => {
+  //   const triggerElement = document.querySelectorAll(".cardTrigger")
 
-    triggerElement.forEach(elem => {
-      gsap.fromTo(
-        elem,
-        {
-          x: "+=100",
-          opacity: 0,
-          display: "none",
-        },
-        {
-          x: 0,
-          opacity: 1,
-          duration: 0.5,
-          display: "block",
-          scrollTrigger: { trigger: elem, start: "top 70%" },
-        }
-      )
-    })
-  }, [])
+  //   triggerElement.forEach(elem => {
+  //     gsap.fromTo(
+  //       elem,
+  //       {
+  //         x: "+=-100",
+  //         opacity: 0,
+  //         display: "none",
+  //       },
+  //       {
+  //         x: 0,
+  //         opacity: 1,
+  //         duration: 0.5,
+  //         display: "block",
+  //         scrollTrigger: { trigger: elem, start: "top 70%" },
+  //       }
+  //     )
+  //   })
+  // }, [])
 
   return (
     <>

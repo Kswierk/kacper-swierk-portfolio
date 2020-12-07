@@ -23,11 +23,11 @@ const Work = () => {
     gsap.fromTo(
       triggerElement,
       {
-        y: "+=50",
+        x: "+=-100",
         opacity: 0,
       },
       {
-        y: 0,
+        x: 0,
         opacity: 1,
         duration: 0.5,
         scrollTrigger: { trigger: triggerElement, start: "top 70%" },
@@ -37,9 +37,13 @@ const Work = () => {
   return (
     <>
       <Wraper id="work" className="heder">
-        <SectionHeading sectionNumber="03." sectionName="My Projects" />
+        <SectionHeading
+          className="heder"
+          sectionNumber="03."
+          sectionName="My Projects"
+        />
+        <ProjectCard />
       </Wraper>
-      <ProjectCard />
     </>
   )
 }
