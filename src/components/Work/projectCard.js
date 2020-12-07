@@ -188,8 +188,12 @@ const ProjectCard = () => {
   return (
     <>
       {projects.map((elem, index) => (
-        <CardWraper key={index} style={{ backgroundImage: `url(${elem.src})` }}>
-          <InsideWraper left={elem.left} className="cardTrigger">
+        <CardWraper
+          key={index}
+          style={{ backgroundImage: `url(${elem.src})` }}
+          className="cardTrigger"
+        >
+          <InsideWraper left={elem.left}>
             <StyledH3>{elem.title}</StyledH3>
             <StyledText left={elem.left}>{elem.description}</StyledText>
             <FlexWraper>
