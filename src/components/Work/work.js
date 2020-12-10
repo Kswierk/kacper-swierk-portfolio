@@ -9,11 +9,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 gsap.registerPlugin(ScrollTrigger)
 
 const Wraper = styled.div`
-  max-width: 900px;
+  max-width: 1000px;
   margin: 50px auto;
-  @media (min-width: 1300px) {
-    max-width: 1000px;
-  }
 `
 
 const Work = () => {

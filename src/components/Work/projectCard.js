@@ -33,12 +33,11 @@ const CardWraper = styled.div`
   @media (min-width: 1000px) {
     margin: 0 auto 100px auto;
   }
+  @media (min-width: 1100px) {
+    width: 100%;
+  }
   @media (min-width: 1300px) {
     max-width: 1000px;
-  }
-
-  @media (min-width: 1100px) {
-    width: 85%;
   }
 
   &:before {
@@ -62,7 +61,7 @@ const StyledImg = styled.div`
   position: absolute;
   display: none;
   height: 100%;
-  width: 35vw;
+  width: 50%;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 4px;
@@ -83,6 +82,7 @@ const StyledImg = styled.div`
   @media (min-width: 790px) {
     display: block;
     right: ${props => (props.left ? "0" : null)};
+    width: 60%;
   }
 `
 

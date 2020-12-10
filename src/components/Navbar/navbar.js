@@ -182,14 +182,15 @@ const Navbar = () => {
       {
         opacity: 0,
       },
-      { autoAlpha: 1, opacity: 1, duration: 1 }
+      { opacity: 1, duration: 1 }
     )
     gsap.fromTo(
       logo,
       {
+        y: 0,
         opacity: 0,
       },
-      { autoAlpha: 1, opacity: 1, duration: 1, delay: 0.5 }
+      { opacity: 1, y: 0, duration: 1, delay: 0.5 }
     )
 
     links.forEach((elem, index) => {
@@ -198,15 +199,16 @@ const Navbar = () => {
       gsap.fromTo(
         elem,
         {
-          y: "-=200",
+          y: "-=30",
           opacity: 0,
           visibility: "hidden",
         },
         {
-          y: "+=200",
+          y: "+=30",
           autoAlpha: 1,
           opacity: 1,
-          delay: index / 6,
+          delay: index / 8,
+          // duration: 0.6,
           visibility: "visible",
           ease: "power1.inOut",
         }

@@ -105,14 +105,14 @@ const Hero = () => {
   useEffect(() => {
     const fadeElements = document.querySelectorAll(".fadeElement")
 
-    fadeElements.forEach((elem, index) => {
+    fadeElements.forEach(elem => {
       gsap.fromTo(
         elem,
-        { y: "+=50", opacity: 0 },
+        { y: "-=50", opacity: 0 },
         {
           y: "0",
           opacity: 1,
-          delay: 1 + index / 8,
+          delay: 1.2,
           duration: 1.2,
           visibility: "visible",
         }
