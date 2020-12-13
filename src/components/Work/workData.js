@@ -47,6 +47,8 @@ export const projects = [
     technologies: ["gatsby.js", "css", "html"],
     githubLink: "#",
     outsideLink: "#",
+    src: obliczmakro,
+
     left: true,
   },
 ]

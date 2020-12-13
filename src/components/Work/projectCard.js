@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import styled from "styled-components"
 // import projectImage from "../../assets/images/kacper.jpg"
 import obliczmakro from "../../images/obliczmakro.jpg"
