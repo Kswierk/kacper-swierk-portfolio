@@ -109,7 +109,7 @@ const Technologies = () => {
               <StyledLi>Redux</StyledLi>
               <StyledLi>Gatsby</StyledLi>
               <StyledLi>Axios</StyledLi>
-              <StyledLi>Jest</StyledLi>
+              <StyledLi>Bootstrap</StyledLi>
             </div>
             <div>
               <StyledLi>GSAP</StyledLi>
