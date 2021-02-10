@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { gsap } from "gsap"
-import { Document } from "react-pdf"
 
 import { menuItems } from "./menuItems"
 import logo from "../../images/logo.jpg"
