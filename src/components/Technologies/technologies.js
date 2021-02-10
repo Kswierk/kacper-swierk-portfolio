@@ -104,16 +104,16 @@ const Technologies = () => {
             <div>
               <StyledLi>HTML</StyledLi>
               <StyledLi>(S)CSS</StyledLi>
+              <StyledLi>TypeScript</StyledLi>
               <StyledLi>JavaScript (ES6+)</StyledLi>
               <StyledLi>React &amp; Hooks</StyledLi>
               <StyledLi>Redux</StyledLi>
+              <StyledLi>Jest</StyledLi>
               <StyledLi>Gatsby</StyledLi>
-              <StyledLi>Axios</StyledLi>
-              <StyledLi>Bootstrap</StyledLi>
             </div>
             <div>
+              <StyledLi>Axios</StyledLi>
               <StyledLi>GSAP</StyledLi>
-              <StyledLi>CSS Modules</StyledLi>
               <StyledLi>Styled Components</StyledLi>
               <StyledLi>Firebase</StyledLi>
               <StyledLi>Postman</StyledLi>

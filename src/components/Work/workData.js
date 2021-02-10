@@ -33,12 +33,12 @@ export const githubSvg = (
 
 export const projects = [
   {
-    title: "Bodyfix for programmers",
+    title: "Bodyfix",
     description:
       "It helps to improve the comfort and quality of your work through education and selection of appropriate exercises for people working most of the day on the computer",
     technologies: ["Typescript", "React", "Redux"],
     githubLink: "https://github.com/Kswierk/bodyfix",
-    outsideLink: "#",
+    outsideLink: "https://adoring-euclid-a00646.netlify.app/",
     src: bodyfix,
 
     left: false,
@@ -57,9 +57,9 @@ export const projects = [
     title: "Pomodorro",
     description:
       "Pomodorro is a customizable pomodoro timer that works on desktop & mobile browser. The aim of this app is to help you focus on any task you are working on, such as study, writing, or coding.",
-    technologies: ["React", "Redux", "Styled Components"],
+    technologies: ["React", "Redux", "Firebase", "Styled Components"],
     githubLink: "https://github.com/Kswierk/pomodoro-app-react",
-    outsideLink: "#",
+    outsideLink: "https://compassionate-torvalds-ca51e1.netlify.app/",
     src: pomodorro,
 
     left: false,

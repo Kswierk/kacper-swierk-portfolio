@@ -12,7 +12,6 @@ gsap.registerPlugin(ScrollTrigger)
 
 const CardWraper = styled.div`
   width: 85%;
-  /* height: 50vw; */
   margin: 80px auto;
   border-radius: 4px;
   /* position: absolute; */
@@ -25,19 +24,19 @@ const CardWraper = styled.div`
   color: #ccd6f6;
 
   @media (min-width: 790px) {
-    height: 22vw;
+    /* height: 22vw; */
     margin: 0 auto 130px auto;
     background: none !important;
     width: 75%;
   }
   @media (min-width: 1000px) {
-    margin: 0 auto 100px auto;
+    margin: 0 auto 120px auto;
   }
   @media (min-width: 1100px) {
     width: 100%;
   }
   @media (min-width: 1300px) {
-    max-width: 1000px;
+    max-width: 1100px;
   }
 
   &:before {
@@ -57,32 +56,32 @@ const StyledImg = styled.div`
   /* background-image: url(${obliczmakro}); */
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   position: absolute;
   display: none;
   height: 100%;
-  width: 50%;
+  width: 80%;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 4px;
 
-  &::after {
+  /* &::after {
     content: "";
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: rgba(100, 255, 218, 0.5);
+    background-color: rgba(100, 255, 218, 0.7);
     transition: all 0.2s ease-in-out;
     border-radius: 4px;
   }
   &:hover::after {
     background-color: rgba(106, 90, 205, 0);
-  }
+  } */
 
   @media (min-width: 790px) {
     display: block;
     right: ${props => (props.left ? "0" : null)};
-    width: 60%;
+    width: 65%;
   }
 `
 
@@ -204,11 +203,23 @@ const ProjectCard = () => {
               ))}
             </FlexWraper>
             <IconsWraper>
-              <StyledLink href={elem.githubLink}>{githubSvg}</StyledLink>
-              <StyledLink href={elem.outsideLink}>{outSideSvg}</StyledLink>
+              <StyledLink
+                target="_blank"
+                rel="noreferrer"
+                href={elem.githubLink}
+              >
+                {githubSvg}
+              </StyledLink>
+              <StyledLink
+                target="_blank"
+                rel="noreferrer"
+                href={elem.outsideLink}
+              >
+                {outSideSvg}
+              </StyledLink>
             </IconsWraper>
           </InsideWraper>
-          <a href={elem.outsideLink}>
+          <a target="_blank" rel="noreferrer" href={elem.outsideLink}>
             <StyledImg
               left={elem.left}
               style={{ backgroundImage: `url(${elem.src})` }}
