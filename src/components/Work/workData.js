@@ -1,5 +1,7 @@
 import React from "react"
 import obliczmakro from "../../images/obliczmakro.jpg"
+import bodyfix from "../../images/bodyfix.png"
+import pomodorro from "../../images/pomodorro.png"
 
 export const outSideSvg = (
   <svg
@@ -31,24 +33,35 @@ export const githubSvg = (
 
 export const projects = [
   {
-    title: "Daily Calories Intake Calculator",
+    title: "Bodyfix for programmers",
     description:
-      "Provide some of your body parameters to calculate your daily calories intake. BMR calc also counts your macronutrients depending on your goals. Also it shows your BMI and ideal body weight based on most efficient formulas",
-    technologies: ["JavaScript", "SCSS", "RWD"],
-    githubLink: "https://github.com/Kswierk/BMR-calc",
-    outsideLink: "https://kswierk.github.io/BMR-calc/",
-    src: obliczmakro,
+      "It helps to improve the comfort and quality of your work through education and selection of appropriate exercises for people working most of the day on the computer",
+    technologies: ["Typescript", "React", "Redux"],
+    githubLink: "https://github.com/Kswierk/bodyfix",
+    outsideLink: "#",
+    src: bodyfix,
+
     left: false,
   },
   {
-    title: "projekt drugi",
+    title: "BMR Calculator",
     description:
-      " facilisizzle izzle, crunk izzle, ass. Vestibulum rizzle ipsum primizzle in break it down orci luctizzle et ultrices fo shizzle my nizzle shiznit Curae",
-    technologies: ["gatsby.js", "css", "html"],
-    githubLink: "#",
-    outsideLink: "#",
+      "An application for calculating the caloric demand based on the entered data. It also allows you to know many other statistics about your body.",
+    technologies: ["Typescript", "SCSS", "RWD"],
+    githubLink: "https://github.com/Kswierk/BMR-calc",
+    outsideLink: "https://kswierk.github.io/BMR-calc/",
     src: obliczmakro,
-
     left: true,
+  },
+  {
+    title: "Pomodorro",
+    description:
+      "Pomodorro is a customizable pomodoro timer that works on desktop & mobile browser. The aim of this app is to help you focus on any task you are working on, such as study, writing, or coding.",
+    technologies: ["React", "Redux", "Styled Components"],
+    githubLink: "https://github.com/Kswierk/pomodoro-app-react",
+    outsideLink: "#",
+    src: pomodorro,
+
+    left: false,
   },
 ]
