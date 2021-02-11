@@ -7,7 +7,7 @@ import logo from "../../images/logo.jpg"
 import Backdrop from "./backdrop"
 import { Link } from "react-scroll"
 
-import Resume from "../../PDF/resume.pdf"
+import resume from "../../docs/resume.pdf"
 
 const StyledNav = styled.nav`
   background-color: RGBA(10, 25, 47, 0.5);
@@ -159,6 +159,35 @@ const StyledLink = styled(Link)`
   }
 `
 
+const StyledResume = styled.a`
+  font-family: "Roboto Mono", monospace;
+  cursor: pointer;
+
+  text-decoration: none;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.8rem;
+  border: 1px solid #08ffc8;
+  border-radius: 4px;
+  color: #08ffc8;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    color: #08ffc8;
+    transition: all 0.3s ease-out;
+    background-color: RGBA(8, 255, 200, 0.2);
+  }
+
+  @media screen and (max-width: 790px) {
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    display: table;
+    width: 20%;
+    margin: 0 auto;
+  }
+`
+
 const Logo = styled.img`
   height: 100%;
   /* width: 100%; */
@@ -295,6 +324,9 @@ const Navbar = () => {
               </li>
             )
           })}
+          <li>
+            <StyledResume href="resume">Resume</StyledResume>
+          </li>
         </StyledUl>
       </StyledNav>
       <Backdrop show={clicked} clicked={showSideMenuHandler} />

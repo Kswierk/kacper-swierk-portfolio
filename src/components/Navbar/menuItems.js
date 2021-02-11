@@ -19,11 +19,11 @@ export const menuItems = [
     url: "contact",
     className: "fadelink",
   },
-  {
-    title: " Resume",
-    url: "#",
-    className: "fadelink",
+  // {
+  //   title: " Resume",
+  //   url: "#",
+  //   className: "fadelink",
 
-    resume: "true",
-  },
+  //   resume: "true",
+  // },
 ]
