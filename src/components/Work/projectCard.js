@@ -82,7 +82,6 @@ const StyledImg = styled.div`
     display: block;
     right: ${props => (props.left ? "0" : null)};
     width: 70%;
-    height: 100%;
   }
 `
 
@@ -124,7 +123,7 @@ const StyledText = styled.p`
 const FlexWraper = styled.div`
   display: flex;
   /* align-items: center; */
-  margin: 20px 0 5px 0;
+  margin: 50px 0 5px 0;
   font-family: "Roboto Mono", monospace;
 `
 
