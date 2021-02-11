@@ -325,7 +325,9 @@ const Navbar = () => {
             )
           })}
           <li>
-            <StyledResume href="resume">Resume</StyledResume>
+            <StyledResume target="_blank" href="resume">
+              Resume
+            </StyledResume>
           </li>
         </StyledUl>
       </StyledNav>

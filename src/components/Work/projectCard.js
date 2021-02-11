@@ -18,7 +18,7 @@ const CardWraper = styled.div`
   max-width: 900px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   position: relative;
 
   color: #ccd6f6;
@@ -81,7 +81,8 @@ const StyledImg = styled.div`
   @media (min-width: 790px) {
     display: block;
     right: ${props => (props.left ? "0" : null)};
-    width: 65%;
+    width: 70%;
+    height: 100%;
   }
 `
 

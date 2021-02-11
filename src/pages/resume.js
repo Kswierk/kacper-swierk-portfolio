@@ -8,20 +8,11 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 // import Layout from "../components/layout"
 
 const Wraper = styled.div`
-  /* text-align: center; */
   display: flex;
-  /* margin: 0 auto; */
-  /* position: relative; */
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  /* left: 50%;
-  transform: translateX(-50%); */
   background-color: #fff;
-  /* background-color: #0a192f;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0; */
 `
 
 const StyledParagraph = styled.p`
