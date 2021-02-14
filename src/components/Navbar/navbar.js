@@ -7,8 +7,6 @@ import logo from "../../images/K.png"
 import Backdrop from "./backdrop"
 import { Link } from "react-scroll"
 
-import resume from "../../docs/resume.pdf"
-
 const StyledNav = styled.nav`
   background-color: RGBA(10, 25, 47, 0.5);
   width: 100%;
