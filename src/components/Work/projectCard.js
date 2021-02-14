@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-// import projectImage from "../../assets/images/kacper.jpg"
 import obliczmakro from "../../images/obliczmakro.jpg"
 import { outSideSvg, githubSvg } from "./workData"
 import { projects } from "./workData"
@@ -13,8 +12,6 @@ gsap.registerPlugin(ScrollTrigger)
 const CardWraper = styled.div`
   width: 85%;
   margin: 80px auto;
-  /* border-radius: 4px; */
-  /* position: absolute; */
   max-width: 900px;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,7 +21,6 @@ const CardWraper = styled.div`
   color: #ccd6f6;
 
   @media (min-width: 790px) {
-    /* height: 22vw; */
     margin: 0 auto 130px auto;
     background: none !important;
     width: 75%;
@@ -53,7 +49,6 @@ const CardWraper = styled.div`
 `
 
 const StyledImg = styled.div`
-  /* background-image: url(${obliczmakro}); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -63,7 +58,6 @@ const StyledImg = styled.div`
   width: 80%;
   top: 50%;
   transform: translateY(-50%);
-  /* border-radius: 4px; */
   background-color: RGBA(10, 25, 47, 0.3);
   background-blend-mode: multiply;
   transition: all 0.3s ease;
@@ -72,19 +66,6 @@ const StyledImg = styled.div`
     background-blend-mode: none;
     background-color: transparent;
   }
-
-  /* &::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: rgba(100, 255, 218, 0.7);
-    transition: all 0.2s ease-in-out;
-    border-radius: 4px;
-  }
-  &:hover::after {
-    background-color: rgba(106, 90, 205, 0);
-  } */
 
   @media (min-width: 790px) {
     display: block;
@@ -130,7 +111,6 @@ const StyledText = styled.p`
 
 const FlexWraper = styled.div`
   display: flex;
-  /* align-items: center; */
   margin: 50px 0 5px 0;
   font-family: "Roboto Mono", monospace;
 `
@@ -172,28 +152,6 @@ const InsideWraper = styled.div`
 `
 
 const ProjectCard = () => {
-  // useEffect(() => {
-  //   const triggerElement = document.querySelectorAll(".cardTrigger")
-
-  //   triggerElement.forEach(elem => {
-  //     gsap.fromTo(
-  //       elem,
-  //       {
-  //         x: "+=-100",
-  //         opacity: 0,
-  //         display: "none",
-  //       },
-  //       {
-  //         x: 0,
-  //         opacity: 1,
-  //         duration: 0.5,
-  //         display: "block",
-  //         scrollTrigger: { trigger: elem, start: "top 70%" },
-  //       }
-  //     )
-  //   })
-  // }, [])
-
   return (
     <>
       {projects.map((elem, index) => (
