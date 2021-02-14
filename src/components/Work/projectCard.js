@@ -13,7 +13,7 @@ gsap.registerPlugin(ScrollTrigger)
 const CardWraper = styled.div`
   width: 85%;
   margin: 80px auto;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   /* position: absolute; */
   max-width: 900px;
   background-position: center;
@@ -63,7 +63,15 @@ const StyledImg = styled.div`
   width: 80%;
   top: 50%;
   transform: translateY(-50%);
-  border-radius: 4px;
+  /* border-radius: 4px; */
+  background-color: RGBA(10, 25, 47, 0.3);
+  background-blend-mode: multiply;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-blend-mode: none;
+    background-color: transparent;
+  }
 
   /* &::after {
     content: "";
