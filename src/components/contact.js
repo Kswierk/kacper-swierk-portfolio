@@ -52,7 +52,7 @@ const StatusWraper = styled.div`
 `
 
 const StatusInnerWraper = styled.div`
-  border: 1px solid #08ffc8;
+  border: 1px solid #ff1818;
   padding: 1rem;
   border-radius: 4px;
   margin: 0 10px;
@@ -69,6 +69,7 @@ const StyledLink = styled.a`
   text-decoration: none;
   color: #08ffc8;
   font-family: "Roboto Mono", monospace;
+  margin-top: 25px;
   padding: 1rem;
   border: 1px solid #08ffc8;
   border-radius: 4px;
@@ -104,15 +105,13 @@ const Contact = () => {
       <StyledH3>04. What's Next?</StyledH3>
       <StyledH2>Get In Touch</StyledH2>
       <StyledP>
-        Currently I am looking for an opportunity to start a new job and expand
-        my commercial experience. If you have any questions, feel free to
-        contact me via any media!
+      Even though I am not currently looking for a new job, my inbox is open. If you have any questions or just want to chat, feel free to contact me via any media!
       </StyledP>
       <StatusWraper>
-        <StatusInnerWraper>
+        {/* <StatusInnerWraper>
           <h4>Status</h4>
-          <StyledStatusPara>Open for job offers</StyledStatusPara>
-        </StatusInnerWraper>
+          <StyledStatusPara>Closed for job offers</StyledStatusPara>
+        </StatusInnerWraper> */}
         <StyledLink href="mailto:kacper.swierk@gmail.com">Say Hello</StyledLink>
       </StatusWraper>
     </Wraper>

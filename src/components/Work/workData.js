@@ -45,7 +45,7 @@ export const projects = [
   {
     title: "BMR Calculator",
     description:
-      "An application for calculating the caloric demand based on the entered data. It also allows you to know many other statistics about your body.",
+      "An application for calculating the caloric demand based on the entered data. It also allows you to know many other statistics about your body",
     technologies: ["Typescript", "SCSS", "RWD"],
     githubLink: "https://github.com/Kswierk/BMR-calc",
     outsideLink: "https://kswierk.github.io/BMR-calc/",
@@ -55,7 +55,7 @@ export const projects = [
   {
     title: "Pomodorro",
     description:
-      "Pomodorro is a customizable pomodoro timer that works on desktop & mobile browser. The aim of this app is to help you focus on any task you are working on, such as study, writing, or coding.",
+      "Pomodorro is a customizable pomodoro timer that works on desktop & mobile browser. The aim of this app is to help you focus on any task you are working on, such as study, writing, or coding",
     technologies: ["React", "Redux", "Firebase", "Styled Components"],
     githubLink: "https://github.com/Kswierk/pomodoro-app-react",
     outsideLink: "https://compassionate-torvalds-ca51e1.netlify.app/",

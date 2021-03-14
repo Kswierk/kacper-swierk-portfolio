@@ -86,17 +86,12 @@ const About = () => {
       <SectionWraper>
         <div>
           <StyledPara>
-            Hello! I'm Kacper, a front end developer
+            Hello! I'm Kacper, a web developer
             <StyledSpan>based in Cracow, Poland.</StyledSpan>
           </StyledPara>
           <StyledPara>
             Shortly after graduating from
-            <StyledSpan>Cracow University of Technology</StyledSpan>, I started
-            to ask myself a question - what I want to do with in my career ? and
-            then I just started to programming. My main professional goal right
-            now is to find a job that will give me an opportunity to improve my
-            programming skills and engage in interesting and meaningful
-            projects.
+            <StyledSpan>Cracow University of Technology</StyledSpan>, I started to create web applications, mainly in JavaScript/Typescript and React.js. I am up-to-date with the lastest technology trends and solutions. Currently working with the ServiceNow platform as Junior Developer/Consultant.
           </StyledPara>
           <StyledPara>
             <StyledSpan>On a personal level,</StyledSpan> I am self-motivated,

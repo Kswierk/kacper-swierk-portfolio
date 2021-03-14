@@ -96,8 +96,7 @@ const Technologies = () => {
         </SectionHeading>
         <StyledH3>
           Here are some technologies and tools I've been working with recently
-          in my projects. Currently im learning TypeScript and improving my unit
-          testing skills.
+          in my projects. Currently, I am expanding my skills as a developer of the ServiceNow platform.
         </StyledH3>
         <FlexWraper>
           <StyledUl>
@@ -106,13 +105,13 @@ const Technologies = () => {
               <StyledLi>(S)CSS</StyledLi>
               <StyledLi>TypeScript</StyledLi>
               <StyledLi>JavaScript (ES6+)</StyledLi>
-              <StyledLi>React &amp; Hooks</StyledLi>
+              <StyledLi>React</StyledLi>
               <StyledLi>Redux</StyledLi>
               <StyledLi>Jest</StyledLi>
-              <StyledLi>Gatsby</StyledLi>
+              <StyledLi>Axios</StyledLi>
             </div>
             <div>
-              <StyledLi>Axios</StyledLi>
+              <StyledLi>ServiceNow</StyledLi>
               <StyledLi>GSAP</StyledLi>
               <StyledLi>Styled Components</StyledLi>
               <StyledLi>Firebase</StyledLi>

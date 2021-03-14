@@ -130,7 +130,7 @@ const Hero = () => {
           </HeroTexth3>
         </HeroText>
         <StyledP className="fadeElement">
-          I'm a front end developer based in Cracow, Poland. I enjoy building
+          I'm a web developer based in Cracow, Poland. I enjoy building
           useful websites, applications and everything in between.
         </StyledP>
         <StyledLink
