@@ -105,7 +105,7 @@ const Contact = () => {
       <StyledH3>04. What's Next?</StyledH3>
       <StyledH2>Get In Touch</StyledH2>
       <StyledP>
-      Even though I am not currently looking for a new job, my inbox is open. If you have any questions or just want to chat, feel free to contact me via any media!
+      Even though I am not currently looking for any new opportunities, my inbox is open. If you have any questions or just want to chat, feel free to contact me via any media!
       </StyledP>
       <StatusWraper>
         {/* <StatusInnerWraper>
